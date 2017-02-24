@@ -34,3 +34,43 @@
 ####js对象
 
 JavaScript中的对象本质上是一个关联数组。
+
+####js作用域
+
+JavaScript没有块级作用域，而是函数作用域(函数体变量提升)
+
+		var name = "A";
+		if(true) {
+			var name = "B";
+		}
+		console.log(name);//打印出B
+
+		var name = "A";
+		(function() {
+			console.log(A);//打印出undefined(因为函数体内的name声明被提升了)
+			var name = "B";
+		})();
+
+		上面的函数其实是：
+		var name = "A";
+		(function() {
+			var name;
+			console.log(A);
+			name = "B";
+		})();
+
+
+####==与===
+
+==：不同类型会转化为同一类型，然后看值是否相等；
+===：如果类型不同，则结果就是不等。
+
+####typeof与instanceof
+
+两个都是操作符(类似于+)，而不是函数,因此不需要括号。
+
+		var result = typeof name;
+		
+		var object = new Object();
+		var result = object instanceof Object;
+		
