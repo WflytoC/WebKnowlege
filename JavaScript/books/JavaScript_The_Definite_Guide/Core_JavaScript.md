@@ -58,6 +58,8 @@ An object's prototype is a reference to another object from which properties are
 
 每个JavaScript对象都有与其相关联的第二个对象，叫作prototype，第一个对象继承自该prototype的属性。
 
+JavaScript的所有类(即函数)都有一个prototype属性，当为JavaScript类的prototype属性添加函数、属性时，则可视为对原有类的扩展。
+
 
 * 创建对象
 
